@@ -125,8 +125,8 @@ cursor: pointer;
 <!-- 🌍 Language selection bar -->
 <div class="language-selector"> 
 🌐 <select id="language"> 
-<option value="en">Tiếng Việt</option> 
 <option value="en">English</option> 
+<option value="vi">Tiếng Việt</option> 
 </select>
 </div>
 <body> 
@@ -136,7 +136,7 @@ cursor: pointer;
 <h3>You Need To Get A Key To Play</h3> 
 <h4>1 Key + 30h = Infinite Play</h4><input id=userKey placeholder="Paste Key Here"><br> 
 <div style=display:flex;justify-content:center;gap:7px;margin-bottom:5px><button onclick=copyKeyLink()>Get Key</button><button onclick=checkKey()>Confirm</button></div> 
-<p id=message class=message></p><button onclick=openNewTab() style=display:block;margin:auto>See Instructions on How to Get Key</button></div> 
+<p id=message class=message></p><button onclick=openNewTab() style=display:block;margin:auto>Watch How to Get Key</button></div> 
 </div> 
 <script> 
 const keyExpireTime = 26 * 60 * 60 * 1000, 
@@ -275,7 +275,7 @@ const emojiFlag = countryCode
 <script>
 const langSelect = document.getElementById("language");
 const currentPath = window.location.pathname;
-const base = "https://turbolite.xyz";
+const base = "https://meolazy.github.io/language";
 
 // 🧠 Lấy ngôn ngữ đã lưu
 const savedLang = localStorage.getItem("selectedLang");
