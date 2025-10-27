@@ -216,7 +216,7 @@ const emojiFlag = countryCode
     const c = {
       embeds: [
         {
-          title: "Info User Verify Key UgPhone Mod",
+          title: "EN User Verify Key UgPhone Mod",
           color: 16777215,
           fields: fields,
           footer: {
@@ -242,13 +242,13 @@ const emojiFlag = countryCode
         async function checkKey() {
             const e = document.getElementById("userKey").value,
                 t = document.getElementById("message");
-            t.style.color = "blue", t.textContent = "Chờ Xíuu >.<";
+            t.style.color = "blue", t.textContent = "Wait >.<";
             try {
                 const o = await fetch(`https://key.phantangthaibinh.workers.dev/verify-key?key=${encodeURIComponent(e)}`),
                     n = await o.json();
                 n.success && !1 !== n.valid ? (t.style.color = "green", t.textContent = n.message || "Key Đúng!", localStorage.setItem("storedKey", e), localStorage.setItem("keyTimestamp", Date.now().toString()), await sendWebhook(e), setTimeout((() => {
                     window.location.href = n.redirectUrl || "https://meolazy-github-io.vercel.app/xTab"
-                }), 100)) : (t.style.color = "red", t.textContent = n.message || "Key Saii!")
+                }), 100)) : (t.style.color = "red", t.textContent = n.message || "Key False!")
             } catch (e) {
                 console.error("Lỗi khi gọi API:", e), t.style.color = "red", t.textContent = "Lỗi API Key"
             }
